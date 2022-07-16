@@ -1,64 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1>HOW TO RUN APP</>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+##
+Requirements :
+    <p>-	make sure the computer has installed php version at least 7.2.</p>
+    <p>-	make sure the computer has installed composer   . Composer a depedency manager for php.</p>
+    <p>-	make sure you have MySQL installed on your computer.</p>
+    
+    
+##
+- Clone the project https://github.com/adimarbun/aichat-api-test.git
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Create database  , example name 'aichatappdb'
+![image](https://user-images.githubusercontent.com/57535407/179352869-18a667d5-9ca4-41fe-9172-ca2b3c52252e.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Run " composer i " to install package
 
-## Learning Laravel
+- Change env and adjust it with your database configuration
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![image](https://user-images.githubusercontent.com/57535407/179352901-4e22e180-ed7a-4e43-8003-04ec14860065.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+- Run " php artisan migrate:fresh --seed  "     to migrate table an seed data inital to database
+ 
+- Run " php artisan serve " to running app
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- On other terminal , run "php artisan schedule:work " to run cronjob scheduler
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+<h1>Documentation API</>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+##
 
-## Code of Conduct
+- API  Check Customer Eligable
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+This api checks whether the customer is eligible to get the voucher, if eligible , lock voucher and expired after 10 minutes if customer not submmit photo
 
-## Security Vulnerabilities
+![image](https://user-images.githubusercontent.com/57535407/179353567-f6044ea9-d21b-4f90-87b3-e36dd24c9017.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![image](https://user-images.githubusercontent.com/57535407/179353636-1b47d8b3-72bd-49f7-9638-70e2c0475340.png)
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- API to chek photo submission
+
+This api to check photo submmission, if eligble , alocate the voucher which already lock and not expired.   
+
+![image](https://user-images.githubusercontent.com/57535407/179353773-3db08947-f6e3-415d-bd16-018630ce3cc3.png)
+
+![image](https://user-images.githubusercontent.com/57535407/179353807-b7641b98-319c-4fa6-a500-390218ed9e41.png)
+
+
+
+<h1>About Proses API</>
+
+##
+
+- API  Check Customer Eligable
+
+![Cek Egiliable diagram](https://user-images.githubusercontent.com/57535407/179354311-90e91ff9-ae3d-4531-9baf-8e64dda11006.jpg)
+
+- API to chek photo submission
+
+![validate photo diagram-1](https://user-images.githubusercontent.com/57535407/179354363-7024ef9d-5104-4a04-87f3-9aa22089e94c.jpg)
+
+
+
+
+
+
+
+
