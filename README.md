@@ -5,7 +5,7 @@
 Requirements :
     <p>-	make sure the computer has installed php version at least 7.2.</p>
     <p>-	make sure the computer has installed composer   . Composer a depedency manager for php.</p>
-    <p>-	make sure you have MySQL installed on your computer.</p>
+    <p>-	make sure you have MySQL installed on your computer</p>
     
     
 ##
