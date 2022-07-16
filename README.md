@@ -1,4 +1,8 @@
-<h1>HOW TO RUN APP</>
+<h1>DOCUMENTATION</>
+
+##
+
+HOW TO RUN APP
 
 
 ##
@@ -48,9 +52,11 @@ so that API can be simulated
 
 url document api https://documenter.getpostman.com/view/9794169/UzQvs57B#6c55b227-4730-456c-ac42-8c2fdaaf6d4d
 
-- API  Check Customer Eligable
+<h4>- API  Check Customer Eligable</h4>
 
 This api checks whether the customer is eligible to get the voucher, if eligible , lock voucher and expired after 10 minutes if customer not submmit photo
+
+![image](https://user-images.githubusercontent.com/57535407/179356865-f4b3264a-c48d-4475-8a67-dfb58a5b013d.png)
 
 
 Example request and respons
@@ -65,7 +71,7 @@ Example error response
 
 
 
-- API to chek photo submission
+<h4>- API to chek photo submission </h4>
 
 This api to check photo submmission, if eligble , alocate the voucher which already lock and not expired. 
 
